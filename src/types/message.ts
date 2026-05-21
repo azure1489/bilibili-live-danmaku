@@ -262,16 +262,52 @@ export namespace MessageData {
       guard_level: number;
       /** 礼物名称 */
       giftName: string;
+      /** 礼物信息 */
+      gift_info: {
+        effect_id: number;
+        /** gif图标 */
+        gif: string;
+        has_imaged_gift: number;
+        /** 基本图标 */
+        img_basic: string;
+        /** webp图标 */
+        webp: string;
+      };
       /** 礼物id */
       giftId: number;
       /** 礼物总数 */
       num: number;
+      /** 货币总数 */
       total_coin: number;
       /** 货币类型 */
       coin_type: string;
       /** 赠送礼物的动作描述 */
       action: string;
-      combo_id: string;
+      /** 连击信息 */
+      combo_send: {
+        action: string;
+        combo_id: string;
+        combo_num: number;
+        gift_id: number;
+        gift_name: string;
+        gift_num: number;
+        send_master: null;
+        uid: number;
+        uname: string;
+      };
+      /** 批量连击信息 */
+      batch_combo_send: {
+        action: string;
+        batch_combo_id: string;
+        batch_combo_num: number;
+        blind_gift: null;
+        gift_id: number;
+        gift_name: string;
+        gift_num: number;
+        send_master: null;
+        uid: number;
+        uname: string;
+      };
       batch_combo_id: string;
     };
   }

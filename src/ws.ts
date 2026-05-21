@@ -3,6 +3,8 @@ import { ErrorEvent, CloseEvent } from "./ponyfill/event";
 
 export type WSOptions = LiveOptions & { address?: string };
 
+export type WSClientOptions = WSOptions & { decodeProtobuf?: boolean };
+
 export class LiveWS extends Live {
   ws: WebSocket;
   constructor(
@@ -10,7 +12,7 @@ export class LiveWS extends Live {
     {
       address = "wss://broadcastlv.chat.bilibili.com/sub",
       ...options
-    }: WSOptions = {},
+    }: WSClientOptions = {},
   ) {
     const ws = new WebSocket(address);
     const send = (data: Uint8Array) => {

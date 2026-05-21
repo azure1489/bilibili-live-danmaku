@@ -46,12 +46,16 @@ export class Live extends EventTarget {
   closed: boolean;
   timeout: ReturnType<typeof setTimeout> | number;
 
+  // 是否解码protobuf消息，默认为false，开启后会在原消息基础上添加decoded字段，包含解码后的消息内容
+  readonly decodeProtobuf: boolean;
+
   send: (data: Uint8Array) => void;
   close: () => void;
 
   constructor(
     roomid: number,
     {
+      decodeProtobuf = false,
       send,
       close,
       protover = 3,
@@ -59,13 +63,18 @@ export class Live extends EventTarget {
       authBody,
       uid = 0,
       buvid,
-    }: { send: (data: Uint8Array) => void; close: () => void } & LiveOptions,
+    }: {
+      send: (data: Uint8Array) => void;
+      close: () => void;
+      decodeProtobuf?: boolean;
+    } & LiveOptions,
   ) {
     if (typeof roomid !== "number" || Number.isNaN(roomid)) {
       throw new TypeError(`roomid ${roomid} must be Number not NaN`);
     }
 
     super();
+    this.decodeProtobuf = decodeProtobuf;
     this.roomid = roomid;
     this.connected = false;
     this.closed = false;
@@ -100,7 +109,7 @@ export class Live extends EventTarget {
             );
           }
           if (operation === WSOperation.MESSAGE) {
-            this.decodePbMessage(data);
+            if (this.decodeProtobuf) this.decodePbMessage(data);
             this.dispatchEvent(
               new DataEvent("MESSAGE", { data, protocol, operation }),
             );
@@ -155,6 +164,7 @@ export class Live extends EventTarget {
     this.send(encoder(WSOperation.HEARTBEAT));
   }
 
+  /** 解码protobuf消息 */
   decodePbMessage(msg: MessageData.All & { data?: { pb?: string } }) {
     if (msg.data?.pb) {
       try {

@@ -1,4 +1,10 @@
-import { BilibiliApiClient, LiveWS, parseLiveConfig, WSOptions } from "../src";
+import {
+  BilibiliApiClient,
+  LiveWS,
+  parseLiveConfig,
+  WSClientOptions,
+  WSOptions,
+} from "../src";
 
 try {
   const dotenv = await import("dotenv");
@@ -9,8 +15,8 @@ try {
 
 function getEnv(key: string) {
   return (
-    globalThis.process?.env?.[key] ||
-    globalThis.Deno?.env?.get(key) ||
+    (globalThis as any).process?.env?.[key] ||
+    (globalThis as any).Deno?.env?.get(key) ||
     undefined
   );
 }
@@ -31,11 +37,12 @@ const apiClient = new BilibiliApiClient({
 if (!apiClient.cookies.get("buvid3")) await apiClient.initCookie();
 
 // 获取ws配置
-const config: WSOptions = parseLiveConfig(
-  (await apiClient.xliveGetDanmuInfo({ id: roomid })).data
+const config: WSClientOptions = parseLiveConfig(
+  (await apiClient.xliveGetDanmuInfo({ id: roomid })).data,
 );
 config.buvid = apiClient.cookies.get("buvid3");
 config.uid = Number.parseInt(apiClient.cookies.get("DedeUserID")) || 0;
+config.decodeProtobuf = true;
 
 const live = new LiveWS(roomid, config);
 

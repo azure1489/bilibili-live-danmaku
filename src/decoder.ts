@@ -16,6 +16,12 @@ export const protoDecoderMap: {
     );
     return msg;
   },
+  SEND_GIFT_V2: (msg: MessageData.SEND_GIFT_V2) => {
+    msg.decoded = bilibili.live.gift.v1.SendGiftBroadcast.decode(
+      base64ToUint8Array(msg.data.pb)
+    );
+    return msg;
+  },
 };
 
 function base64ToUint8Array(base64String: string) {

@@ -311,6 +311,15 @@ export namespace MessageData {
       batch_combo_id: string;
     };
   }
+  /** 礼物消息（protobuf），礼物内容位于 gift_list 中 */
+  export interface SEND_GIFT_V2 extends Base {
+    cmd: "SEND_GIFT_V2";
+    data: {
+      pb: string;
+      dmscore: number;
+    };
+    decoded?: bilibili.live.gift.v1.ISendGiftBroadcast;
+  }
   /** @deprecated */
   export interface GUARD_BUY extends Base {
     cmd: "GUARD_BUY";
@@ -534,6 +543,7 @@ export namespace MessageData {
     | INTERACT_WORD_V2
     | LIKE_INFO_V3_CLICK
     | SEND_GIFT
+    | SEND_GIFT_V2
     | USER_TOAST_MSG
     | SUPER_CHAT_MESSAGE
     | WATCHED_CHANGE

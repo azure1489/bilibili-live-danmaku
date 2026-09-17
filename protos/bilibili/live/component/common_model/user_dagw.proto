@@ -11,6 +11,28 @@ message AccountInfo {
 }
 
 //
+message Anon {
+    //
+    AnonType type = 1;
+    //
+    string anon_uid = 2;
+    //
+    string anon_key_ver = 3;
+    //
+    string uinfo_cipher = 4;
+    //
+    bool masked = 5;
+}
+
+//
+enum AnonType {
+    //
+    ANON_TYPE_NONE = 0;
+    //
+    ANON_TYPE_ROOM_ANON = 1;
+}
+
+//
 message Base {
     //
     string name = 1;
@@ -202,6 +224,8 @@ enum RoomAnonTypeEnum {
     RA_ALL = 0;
     //
     RA_With_Subject = 1;
+    //
+    RA_Identity_Only = 2;
 }
 
 //
@@ -246,6 +270,8 @@ message UserInfo {
     UserHeadFrame uhead_frame = 7;
     //
     GuardLeader guard_leader = 8;
+    //
+    Anon anon = 9;
 }
 
 //

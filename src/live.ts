@@ -199,6 +199,8 @@ export interface LiveEventMap extends WebSocketEventMap {
   INTERACT_WORD: DataEvent<MessageData.INTERACT_WORD>;
   /** 礼物消息 */
   SEND_GIFT: DataEvent<MessageData.SEND_GIFT>;
+  /** 礼物消息（protobuf） */
+  SEND_GIFT_V2: DataEvent<MessageData.SEND_GIFT_V2>;
   /** 开通舰长 */
   GUARD_BUY: DataEvent<MessageData.GUARD_BUY>;
   /** SC消息 */

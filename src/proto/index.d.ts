@@ -12,6 +12,451 @@ export namespace bilibili {
             /** Namespace common_model. */
             namespace common_model {
 
+                /** Namespace effect. */
+                namespace effect {
+
+                    /** Properties of an EffectConfigItem. */
+                    interface IEffectConfigItem {
+
+                        /** EffectConfigItem type */
+                        type?: (number|Long|null);
+
+                        /** EffectConfigItem webSvga */
+                        webSvga?: (string|null);
+
+                        /** EffectConfigItem horizontalSvga */
+                        horizontalSvga?: (string|null);
+
+                        /** EffectConfigItem verticalSvga */
+                        verticalSvga?: (string|null);
+
+                        /** EffectConfigItem webMp4 */
+                        webMp4?: (string|null);
+
+                        /** EffectConfigItem webMp4Json */
+                        webMp4Json?: (string|null);
+
+                        /** EffectConfigItem horizontalMp4 */
+                        horizontalMp4?: (string|null);
+
+                        /** EffectConfigItem verticalMp4 */
+                        verticalMp4?: (string|null);
+
+                        /** EffectConfigItem id */
+                        id?: (number|Long|null);
+
+                        /** EffectConfigItem planPlatform */
+                        planPlatform?: ((number|Long)[]|null);
+
+                        /** EffectConfigItem bindGiftIds */
+                        bindGiftIds?: ((number|Long)[]|null);
+
+                        /** EffectConfigItem webMp4Md5 */
+                        webMp4Md5?: (string|null);
+
+                        /** EffectConfigItem horizontalMp4Md5 */
+                        horizontalMp4Md5?: (string|null);
+
+                        /** EffectConfigItem verticalMp4Md5 */
+                        verticalMp4Md5?: (string|null);
+
+                        /** EffectConfigItem webMp4Crc32 */
+                        webMp4Crc32?: (number|Long|null);
+
+                        /** EffectConfigItem horizontalMp4Crc32 */
+                        horizontalMp4Crc32?: (number|Long|null);
+
+                        /** EffectConfigItem verticalMp4Crc32 */
+                        verticalMp4Crc32?: (number|Long|null);
+
+                        /** EffectConfigItem webMp4FileSize */
+                        webMp4FileSize?: (number|Long|null);
+
+                        /** EffectConfigItem horizontalMp4FileSize */
+                        horizontalMp4FileSize?: (number|Long|null);
+
+                        /** EffectConfigItem verticalMp4FileSize */
+                        verticalMp4FileSize?: (number|Long|null);
+
+                        /** EffectConfigItem h265Conf */
+                        h265Conf?: (bilibili.live.component.common_model.effect.IH265Conf|null);
+                    }
+
+                    /** Represents an EffectConfigItem. */
+                    class EffectConfigItem implements IEffectConfigItem {
+
+                        /**
+                         * Constructs a new EffectConfigItem.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.component.common_model.effect.IEffectConfigItem);
+
+                        /** EffectConfigItem type. */
+                        public type: (number|Long);
+
+                        /** EffectConfigItem webSvga. */
+                        public webSvga: string;
+
+                        /** EffectConfigItem horizontalSvga. */
+                        public horizontalSvga: string;
+
+                        /** EffectConfigItem verticalSvga. */
+                        public verticalSvga: string;
+
+                        /** EffectConfigItem webMp4. */
+                        public webMp4: string;
+
+                        /** EffectConfigItem webMp4Json. */
+                        public webMp4Json: string;
+
+                        /** EffectConfigItem horizontalMp4. */
+                        public horizontalMp4: string;
+
+                        /** EffectConfigItem verticalMp4. */
+                        public verticalMp4: string;
+
+                        /** EffectConfigItem id. */
+                        public id: (number|Long);
+
+                        /** EffectConfigItem planPlatform. */
+                        public planPlatform: (number|Long)[];
+
+                        /** EffectConfigItem bindGiftIds. */
+                        public bindGiftIds: (number|Long)[];
+
+                        /** EffectConfigItem webMp4Md5. */
+                        public webMp4Md5: string;
+
+                        /** EffectConfigItem horizontalMp4Md5. */
+                        public horizontalMp4Md5: string;
+
+                        /** EffectConfigItem verticalMp4Md5. */
+                        public verticalMp4Md5: string;
+
+                        /** EffectConfigItem webMp4Crc32. */
+                        public webMp4Crc32: (number|Long);
+
+                        /** EffectConfigItem horizontalMp4Crc32. */
+                        public horizontalMp4Crc32: (number|Long);
+
+                        /** EffectConfigItem verticalMp4Crc32. */
+                        public verticalMp4Crc32: (number|Long);
+
+                        /** EffectConfigItem webMp4FileSize. */
+                        public webMp4FileSize: (number|Long);
+
+                        /** EffectConfigItem horizontalMp4FileSize. */
+                        public horizontalMp4FileSize: (number|Long);
+
+                        /** EffectConfigItem verticalMp4FileSize. */
+                        public verticalMp4FileSize: (number|Long);
+
+                        /** EffectConfigItem h265Conf. */
+                        public h265Conf?: (bilibili.live.component.common_model.effect.IH265Conf|null);
+
+                        /**
+                         * Creates a new EffectConfigItem instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns EffectConfigItem instance
+                         */
+                        public static create(properties?: bilibili.live.component.common_model.effect.IEffectConfigItem): bilibili.live.component.common_model.effect.EffectConfigItem;
+
+                        /**
+                         * Encodes the specified EffectConfigItem message. Does not implicitly {@link bilibili.live.component.common_model.effect.EffectConfigItem.verify|verify} messages.
+                         * @param message EffectConfigItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.component.common_model.effect.IEffectConfigItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified EffectConfigItem message, length delimited. Does not implicitly {@link bilibili.live.component.common_model.effect.EffectConfigItem.verify|verify} messages.
+                         * @param message EffectConfigItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.component.common_model.effect.IEffectConfigItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes an EffectConfigItem message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns EffectConfigItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.component.common_model.effect.EffectConfigItem;
+
+                        /**
+                         * Decodes an EffectConfigItem message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns EffectConfigItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.component.common_model.effect.EffectConfigItem;
+
+                        /**
+                         * Verifies an EffectConfigItem message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates an EffectConfigItem message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns EffectConfigItem
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.component.common_model.effect.EffectConfigItem;
+
+                        /**
+                         * Creates a plain object from an EffectConfigItem message. Also converts values to other types if specified.
+                         * @param message EffectConfigItem
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.component.common_model.effect.EffectConfigItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this EffectConfigItem to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for EffectConfigItem
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a FileConfItem. */
+                    interface IFileConfItem {
+
+                        /** FileConfItem mp4 */
+                        mp4?: (string|null);
+
+                        /** FileConfItem mp4Md5 */
+                        mp4Md5?: (string|null);
+
+                        /** FileConfItem mp4Json */
+                        mp4Json?: (string|null);
+
+                        /** FileConfItem mp4Crc32 */
+                        mp4Crc32?: (number|Long|null);
+
+                        /** FileConfItem mp4FileSize */
+                        mp4FileSize?: (number|Long|null);
+                    }
+
+                    /** Represents a FileConfItem. */
+                    class FileConfItem implements IFileConfItem {
+
+                        /**
+                         * Constructs a new FileConfItem.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.component.common_model.effect.IFileConfItem);
+
+                        /** FileConfItem mp4. */
+                        public mp4: string;
+
+                        /** FileConfItem mp4Md5. */
+                        public mp4Md5: string;
+
+                        /** FileConfItem mp4Json. */
+                        public mp4Json: string;
+
+                        /** FileConfItem mp4Crc32. */
+                        public mp4Crc32: (number|Long);
+
+                        /** FileConfItem mp4FileSize. */
+                        public mp4FileSize: (number|Long);
+
+                        /**
+                         * Creates a new FileConfItem instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns FileConfItem instance
+                         */
+                        public static create(properties?: bilibili.live.component.common_model.effect.IFileConfItem): bilibili.live.component.common_model.effect.FileConfItem;
+
+                        /**
+                         * Encodes the specified FileConfItem message. Does not implicitly {@link bilibili.live.component.common_model.effect.FileConfItem.verify|verify} messages.
+                         * @param message FileConfItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.component.common_model.effect.IFileConfItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified FileConfItem message, length delimited. Does not implicitly {@link bilibili.live.component.common_model.effect.FileConfItem.verify|verify} messages.
+                         * @param message FileConfItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.component.common_model.effect.IFileConfItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a FileConfItem message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns FileConfItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.component.common_model.effect.FileConfItem;
+
+                        /**
+                         * Decodes a FileConfItem message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns FileConfItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.component.common_model.effect.FileConfItem;
+
+                        /**
+                         * Verifies a FileConfItem message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a FileConfItem message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns FileConfItem
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.component.common_model.effect.FileConfItem;
+
+                        /**
+                         * Creates a plain object from a FileConfItem message. Also converts values to other types if specified.
+                         * @param message FileConfItem
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.component.common_model.effect.FileConfItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this FileConfItem to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FileConfItem
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a H265Conf. */
+                    interface IH265Conf {
+
+                        /** H265Conf horizontalMp4 */
+                        horizontalMp4?: (bilibili.live.component.common_model.effect.IFileConfItem|null);
+
+                        /** H265Conf verticalMp4 */
+                        verticalMp4?: (bilibili.live.component.common_model.effect.IFileConfItem|null);
+                    }
+
+                    /** Represents a H265Conf. */
+                    class H265Conf implements IH265Conf {
+
+                        /**
+                         * Constructs a new H265Conf.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.component.common_model.effect.IH265Conf);
+
+                        /** H265Conf horizontalMp4. */
+                        public horizontalMp4?: (bilibili.live.component.common_model.effect.IFileConfItem|null);
+
+                        /** H265Conf verticalMp4. */
+                        public verticalMp4?: (bilibili.live.component.common_model.effect.IFileConfItem|null);
+
+                        /**
+                         * Creates a new H265Conf instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns H265Conf instance
+                         */
+                        public static create(properties?: bilibili.live.component.common_model.effect.IH265Conf): bilibili.live.component.common_model.effect.H265Conf;
+
+                        /**
+                         * Encodes the specified H265Conf message. Does not implicitly {@link bilibili.live.component.common_model.effect.H265Conf.verify|verify} messages.
+                         * @param message H265Conf message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.component.common_model.effect.IH265Conf, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified H265Conf message, length delimited. Does not implicitly {@link bilibili.live.component.common_model.effect.H265Conf.verify|verify} messages.
+                         * @param message H265Conf message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.component.common_model.effect.IH265Conf, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a H265Conf message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns H265Conf
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.component.common_model.effect.H265Conf;
+
+                        /**
+                         * Decodes a H265Conf message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns H265Conf
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.component.common_model.effect.H265Conf;
+
+                        /**
+                         * Verifies a H265Conf message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a H265Conf message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns H265Conf
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.component.common_model.effect.H265Conf;
+
+                        /**
+                         * Creates a plain object from a H265Conf message. Also converts values to other types if specified.
+                         * @param message H265Conf
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.component.common_model.effect.H265Conf, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this H265Conf to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for H265Conf
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+                }
+
                 /** Namespace fans_club. */
                 namespace fans_club {
 
@@ -229,6 +674,133 @@ export namespace bilibili {
                          * @returns The default type url
                          */
                         public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of an Anon. */
+                    interface IAnon {
+
+                        /** Anon type */
+                        type?: (bilibili.live.component.common_model.user_dagw.AnonType|null);
+
+                        /** Anon anonUid */
+                        anonUid?: (string|null);
+
+                        /** Anon anonKeyVer */
+                        anonKeyVer?: (string|null);
+
+                        /** Anon uinfoCipher */
+                        uinfoCipher?: (string|null);
+
+                        /** Anon masked */
+                        masked?: (boolean|null);
+                    }
+
+                    /** Represents an Anon. */
+                    class Anon implements IAnon {
+
+                        /**
+                         * Constructs a new Anon.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.component.common_model.user_dagw.IAnon);
+
+                        /** Anon type. */
+                        public type: bilibili.live.component.common_model.user_dagw.AnonType;
+
+                        /** Anon anonUid. */
+                        public anonUid: string;
+
+                        /** Anon anonKeyVer. */
+                        public anonKeyVer: string;
+
+                        /** Anon uinfoCipher. */
+                        public uinfoCipher: string;
+
+                        /** Anon masked. */
+                        public masked: boolean;
+
+                        /**
+                         * Creates a new Anon instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns Anon instance
+                         */
+                        public static create(properties?: bilibili.live.component.common_model.user_dagw.IAnon): bilibili.live.component.common_model.user_dagw.Anon;
+
+                        /**
+                         * Encodes the specified Anon message. Does not implicitly {@link bilibili.live.component.common_model.user_dagw.Anon.verify|verify} messages.
+                         * @param message Anon message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.component.common_model.user_dagw.IAnon, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified Anon message, length delimited. Does not implicitly {@link bilibili.live.component.common_model.user_dagw.Anon.verify|verify} messages.
+                         * @param message Anon message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.component.common_model.user_dagw.IAnon, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes an Anon message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns Anon
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.component.common_model.user_dagw.Anon;
+
+                        /**
+                         * Decodes an Anon message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns Anon
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.component.common_model.user_dagw.Anon;
+
+                        /**
+                         * Verifies an Anon message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates an Anon message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns Anon
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.component.common_model.user_dagw.Anon;
+
+                        /**
+                         * Creates a plain object from an Anon message. Also converts values to other types if specified.
+                         * @param message Anon
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.component.common_model.user_dagw.Anon, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this Anon to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for Anon
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** AnonType enum. */
+                    enum AnonType {
+                        ANON_TYPE_NONE = 0,
+                        ANON_TYPE_ROOM_ANON = 1
                     }
 
                     /** Properties of a Base. */
@@ -1671,7 +2243,8 @@ export namespace bilibili {
                     /** RoomAnonTypeEnum enum. */
                     enum RoomAnonTypeEnum {
                         RA_ALL = 0,
-                        RA_With_Subject = 1
+                        RA_With_Subject = 1,
+                        RA_Identity_Only = 2
                     }
 
                     /** Properties of a Title. */
@@ -2009,6 +2582,9 @@ export namespace bilibili {
 
                         /** UserInfo guardLeader */
                         guardLeader?: (bilibili.live.component.common_model.user_dagw.IGuardLeader|null);
+
+                        /** UserInfo anon */
+                        anon?: (bilibili.live.component.common_model.user_dagw.IAnon|null);
                     }
 
                     /** Represents a UserInfo. */
@@ -2043,6 +2619,9 @@ export namespace bilibili {
 
                         /** UserInfo guardLeader. */
                         public guardLeader?: (bilibili.live.component.common_model.user_dagw.IGuardLeader|null);
+
+                        /** UserInfo anon. */
+                        public anon?: (bilibili.live.component.common_model.user_dagw.IAnon|null);
 
                         /**
                          * Creates a new UserInfo instance using the specified properties.
@@ -2334,6 +2913,2097 @@ export namespace bilibili {
 
                         /**
                          * Gets the default type url for WealthOption
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+                }
+            }
+        }
+
+        /** Namespace gift. */
+        namespace gift {
+
+            /** Namespace v1. */
+            namespace v1 {
+
+                /** Properties of an EasterEggBenefit. */
+                interface IEasterEggBenefit {
+
+                    /** EasterEggBenefit materialUrl */
+                    materialUrl?: (string|null);
+
+                    /** EasterEggBenefit materialMd5 */
+                    materialMd5?: (string|null);
+
+                    /** EasterEggBenefit effectNum */
+                    effectNum?: (number|Long|null);
+
+                    /** EasterEggBenefit effectNumAudience */
+                    effectNumAudience?: (number|Long|null);
+
+                    /** EasterEggBenefit unlockText */
+                    unlockText?: (string|null);
+
+                    /** EasterEggBenefit webMaterialUrl */
+                    webMaterialUrl?: (string|null);
+
+                    /** EasterEggBenefit webMaterialMd5 */
+                    webMaterialMd5?: (string|null);
+                }
+
+                /** Represents an EasterEggBenefit. */
+                class EasterEggBenefit implements IEasterEggBenefit {
+
+                    /**
+                     * Constructs a new EasterEggBenefit.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.IEasterEggBenefit);
+
+                    /** EasterEggBenefit materialUrl. */
+                    public materialUrl: string;
+
+                    /** EasterEggBenefit materialMd5. */
+                    public materialMd5: string;
+
+                    /** EasterEggBenefit effectNum. */
+                    public effectNum: (number|Long);
+
+                    /** EasterEggBenefit effectNumAudience. */
+                    public effectNumAudience: (number|Long);
+
+                    /** EasterEggBenefit unlockText. */
+                    public unlockText: string;
+
+                    /** EasterEggBenefit webMaterialUrl. */
+                    public webMaterialUrl: string;
+
+                    /** EasterEggBenefit webMaterialMd5. */
+                    public webMaterialMd5: string;
+
+                    /**
+                     * Creates a new EasterEggBenefit instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns EasterEggBenefit instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.IEasterEggBenefit): bilibili.live.gift.v1.EasterEggBenefit;
+
+                    /**
+                     * Encodes the specified EasterEggBenefit message. Does not implicitly {@link bilibili.live.gift.v1.EasterEggBenefit.verify|verify} messages.
+                     * @param message EasterEggBenefit message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.IEasterEggBenefit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified EasterEggBenefit message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.EasterEggBenefit.verify|verify} messages.
+                     * @param message EasterEggBenefit message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.IEasterEggBenefit, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an EasterEggBenefit message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns EasterEggBenefit
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.EasterEggBenefit;
+
+                    /**
+                     * Decodes an EasterEggBenefit message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns EasterEggBenefit
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.EasterEggBenefit;
+
+                    /**
+                     * Verifies an EasterEggBenefit message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an EasterEggBenefit message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns EasterEggBenefit
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.EasterEggBenefit;
+
+                    /**
+                     * Creates a plain object from an EasterEggBenefit message. Also converts values to other types if specified.
+                     * @param message EasterEggBenefit
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.EasterEggBenefit, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this EasterEggBenefit to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for EasterEggBenefit
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a FansLightAnimation. */
+                interface IFansLightAnimation {
+
+                    /** FansLightAnimation medalName */
+                    medalName?: (string|null);
+                }
+
+                /** Represents a FansLightAnimation. */
+                class FansLightAnimation implements IFansLightAnimation {
+
+                    /**
+                     * Constructs a new FansLightAnimation.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.IFansLightAnimation);
+
+                    /** FansLightAnimation medalName. */
+                    public medalName: string;
+
+                    /**
+                     * Creates a new FansLightAnimation instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns FansLightAnimation instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.IFansLightAnimation): bilibili.live.gift.v1.FansLightAnimation;
+
+                    /**
+                     * Encodes the specified FansLightAnimation message. Does not implicitly {@link bilibili.live.gift.v1.FansLightAnimation.verify|verify} messages.
+                     * @param message FansLightAnimation message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.IFansLightAnimation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified FansLightAnimation message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.FansLightAnimation.verify|verify} messages.
+                     * @param message FansLightAnimation message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.IFansLightAnimation, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a FansLightAnimation message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns FansLightAnimation
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.FansLightAnimation;
+
+                    /**
+                     * Decodes a FansLightAnimation message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns FansLightAnimation
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.FansLightAnimation;
+
+                    /**
+                     * Verifies a FansLightAnimation message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a FansLightAnimation message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns FansLightAnimation
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.FansLightAnimation;
+
+                    /**
+                     * Creates a plain object from a FansLightAnimation message. Also converts values to other types if specified.
+                     * @param message FansLightAnimation
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.FansLightAnimation, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this FansLightAnimation to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for FansLightAnimation
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a GiftBenefits. */
+                interface IGiftBenefits {
+
+                    /** GiftBenefits easterEgg */
+                    easterEgg?: (bilibili.live.gift.v1.IEasterEggBenefit|null);
+
+                    /** GiftBenefits fansLightAnimation */
+                    fansLightAnimation?: (bilibili.live.gift.v1.IFansLightAnimation|null);
+                }
+
+                /** Represents a GiftBenefits. */
+                class GiftBenefits implements IGiftBenefits {
+
+                    /**
+                     * Constructs a new GiftBenefits.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.IGiftBenefits);
+
+                    /** GiftBenefits easterEgg. */
+                    public easterEgg?: (bilibili.live.gift.v1.IEasterEggBenefit|null);
+
+                    /** GiftBenefits fansLightAnimation. */
+                    public fansLightAnimation?: (bilibili.live.gift.v1.IFansLightAnimation|null);
+
+                    /**
+                     * Creates a new GiftBenefits instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GiftBenefits instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.IGiftBenefits): bilibili.live.gift.v1.GiftBenefits;
+
+                    /**
+                     * Encodes the specified GiftBenefits message. Does not implicitly {@link bilibili.live.gift.v1.GiftBenefits.verify|verify} messages.
+                     * @param message GiftBenefits message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.IGiftBenefits, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GiftBenefits message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.GiftBenefits.verify|verify} messages.
+                     * @param message GiftBenefits message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.IGiftBenefits, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GiftBenefits message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GiftBenefits
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.GiftBenefits;
+
+                    /**
+                     * Decodes a GiftBenefits message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GiftBenefits
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.GiftBenefits;
+
+                    /**
+                     * Verifies a GiftBenefits message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GiftBenefits message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GiftBenefits
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.GiftBenefits;
+
+                    /**
+                     * Creates a plain object from a GiftBenefits message. Also converts values to other types if specified.
+                     * @param message GiftBenefits
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.GiftBenefits, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GiftBenefits to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GiftBenefits
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a GiftMaterialSnapShot. */
+                interface IGiftMaterialSnapShot {
+
+                    /** GiftMaterialSnapShot imgBasic */
+                    imgBasic?: (string|null);
+
+                    /** GiftMaterialSnapShot webp */
+                    webp?: (string|null);
+
+                    /** GiftMaterialSnapShot effectId */
+                    effectId?: (number|Long|null);
+
+                    /** GiftMaterialSnapShot hasImagedGift */
+                    hasImagedGift?: (number|Long|null);
+
+                    /** GiftMaterialSnapShot gif */
+                    gif?: (string|null);
+                }
+
+                /** Represents a GiftMaterialSnapShot. */
+                class GiftMaterialSnapShot implements IGiftMaterialSnapShot {
+
+                    /**
+                     * Constructs a new GiftMaterialSnapShot.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.IGiftMaterialSnapShot);
+
+                    /** GiftMaterialSnapShot imgBasic. */
+                    public imgBasic: string;
+
+                    /** GiftMaterialSnapShot webp. */
+                    public webp: string;
+
+                    /** GiftMaterialSnapShot effectId. */
+                    public effectId: (number|Long);
+
+                    /** GiftMaterialSnapShot hasImagedGift. */
+                    public hasImagedGift: (number|Long);
+
+                    /** GiftMaterialSnapShot gif. */
+                    public gif: string;
+
+                    /**
+                     * Creates a new GiftMaterialSnapShot instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GiftMaterialSnapShot instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.IGiftMaterialSnapShot): bilibili.live.gift.v1.GiftMaterialSnapShot;
+
+                    /**
+                     * Encodes the specified GiftMaterialSnapShot message. Does not implicitly {@link bilibili.live.gift.v1.GiftMaterialSnapShot.verify|verify} messages.
+                     * @param message GiftMaterialSnapShot message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.IGiftMaterialSnapShot, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GiftMaterialSnapShot message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.GiftMaterialSnapShot.verify|verify} messages.
+                     * @param message GiftMaterialSnapShot message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.IGiftMaterialSnapShot, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GiftMaterialSnapShot message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GiftMaterialSnapShot
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.GiftMaterialSnapShot;
+
+                    /**
+                     * Decodes a GiftMaterialSnapShot message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GiftMaterialSnapShot
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.GiftMaterialSnapShot;
+
+                    /**
+                     * Verifies a GiftMaterialSnapShot message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GiftMaterialSnapShot message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GiftMaterialSnapShot
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.GiftMaterialSnapShot;
+
+                    /**
+                     * Creates a plain object from a GiftMaterialSnapShot message. Also converts values to other types if specified.
+                     * @param message GiftMaterialSnapShot
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.GiftMaterialSnapShot, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GiftMaterialSnapShot to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GiftMaterialSnapShot
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a GroupMedalBrief. */
+                interface IGroupMedalBrief {
+
+                    /** GroupMedalBrief medalId */
+                    medalId?: (number|Long|null);
+
+                    /** GroupMedalBrief name */
+                    name?: (string|null);
+
+                    /** GroupMedalBrief isLighted */
+                    isLighted?: (number|Long|null);
+                }
+
+                /** Represents a GroupMedalBrief. */
+                class GroupMedalBrief implements IGroupMedalBrief {
+
+                    /**
+                     * Constructs a new GroupMedalBrief.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.IGroupMedalBrief);
+
+                    /** GroupMedalBrief medalId. */
+                    public medalId: (number|Long);
+
+                    /** GroupMedalBrief name. */
+                    public name: string;
+
+                    /** GroupMedalBrief isLighted. */
+                    public isLighted: (number|Long);
+
+                    /**
+                     * Creates a new GroupMedalBrief instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GroupMedalBrief instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.IGroupMedalBrief): bilibili.live.gift.v1.GroupMedalBrief;
+
+                    /**
+                     * Encodes the specified GroupMedalBrief message. Does not implicitly {@link bilibili.live.gift.v1.GroupMedalBrief.verify|verify} messages.
+                     * @param message GroupMedalBrief message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.IGroupMedalBrief, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GroupMedalBrief message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.GroupMedalBrief.verify|verify} messages.
+                     * @param message GroupMedalBrief message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.IGroupMedalBrief, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GroupMedalBrief message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GroupMedalBrief
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.GroupMedalBrief;
+
+                    /**
+                     * Decodes a GroupMedalBrief message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GroupMedalBrief
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.GroupMedalBrief;
+
+                    /**
+                     * Verifies a GroupMedalBrief message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GroupMedalBrief message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GroupMedalBrief
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.GroupMedalBrief;
+
+                    /**
+                     * Creates a plain object from a GroupMedalBrief message. Also converts values to other types if specified.
+                     * @param message GroupMedalBrief
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.GroupMedalBrief, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GroupMedalBrief to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for GroupMedalBrief
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of a SendGiftBroadcast. */
+                interface ISendGiftBroadcast {
+
+                    /** SendGiftBroadcast uid */
+                    uid?: (number|Long|null);
+
+                    /** SendGiftBroadcast uname */
+                    uname?: (string|null);
+
+                    /** SendGiftBroadcast face */
+                    face?: (string|null);
+
+                    /** SendGiftBroadcast nameColor */
+                    nameColor?: (string|null);
+
+                    /** SendGiftBroadcast guardLevel */
+                    guardLevel?: (number|Long|null);
+
+                    /** SendGiftBroadcast svgaBlock */
+                    svgaBlock?: (number|Long|null);
+
+                    /** SendGiftBroadcast sendMaster */
+                    sendMaster?: (bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster|null);
+
+                    /** SendGiftBroadcast medalInfo */
+                    medalInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo|null);
+
+                    /** SendGiftBroadcast blindGift */
+                    blindGift?: (bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift|null);
+
+                    /** SendGiftBroadcast giftList */
+                    giftList?: (bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem[]|null);
+
+                    /** SendGiftBroadcast switch */
+                    "switch"?: (boolean|null);
+
+                    /** SendGiftBroadcast test */
+                    test?: (number|Long|null);
+
+                    /** SendGiftBroadcast wealthInfo */
+                    wealthInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo|null);
+
+                    /** SendGiftBroadcast groupMedal */
+                    groupMedal?: (bilibili.live.gift.v1.IGroupMedalBrief|null);
+
+                    /** SendGiftBroadcast senderUinfo */
+                    senderUinfo?: (bilibili.live.component.common_model.user_dagw.IUserInfo|null);
+                }
+
+                /** Represents a SendGiftBroadcast. */
+                class SendGiftBroadcast implements ISendGiftBroadcast {
+
+                    /**
+                     * Constructs a new SendGiftBroadcast.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: bilibili.live.gift.v1.ISendGiftBroadcast);
+
+                    /** SendGiftBroadcast uid. */
+                    public uid: (number|Long);
+
+                    /** SendGiftBroadcast uname. */
+                    public uname: string;
+
+                    /** SendGiftBroadcast face. */
+                    public face: string;
+
+                    /** SendGiftBroadcast nameColor. */
+                    public nameColor: string;
+
+                    /** SendGiftBroadcast guardLevel. */
+                    public guardLevel: (number|Long);
+
+                    /** SendGiftBroadcast svgaBlock. */
+                    public svgaBlock: (number|Long);
+
+                    /** SendGiftBroadcast sendMaster. */
+                    public sendMaster?: (bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster|null);
+
+                    /** SendGiftBroadcast medalInfo. */
+                    public medalInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo|null);
+
+                    /** SendGiftBroadcast blindGift. */
+                    public blindGift?: (bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift|null);
+
+                    /** SendGiftBroadcast giftList. */
+                    public giftList: bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem[];
+
+                    /** SendGiftBroadcast switch. */
+                    public switch: boolean;
+
+                    /** SendGiftBroadcast test. */
+                    public test: (number|Long);
+
+                    /** SendGiftBroadcast wealthInfo. */
+                    public wealthInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo|null);
+
+                    /** SendGiftBroadcast groupMedal. */
+                    public groupMedal?: (bilibili.live.gift.v1.IGroupMedalBrief|null);
+
+                    /** SendGiftBroadcast senderUinfo. */
+                    public senderUinfo?: (bilibili.live.component.common_model.user_dagw.IUserInfo|null);
+
+                    /**
+                     * Creates a new SendGiftBroadcast instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns SendGiftBroadcast instance
+                     */
+                    public static create(properties?: bilibili.live.gift.v1.ISendGiftBroadcast): bilibili.live.gift.v1.SendGiftBroadcast;
+
+                    /**
+                     * Encodes the specified SendGiftBroadcast message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.verify|verify} messages.
+                     * @param message SendGiftBroadcast message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: bilibili.live.gift.v1.ISendGiftBroadcast, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified SendGiftBroadcast message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.verify|verify} messages.
+                     * @param message SendGiftBroadcast message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: bilibili.live.gift.v1.ISendGiftBroadcast, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a SendGiftBroadcast message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns SendGiftBroadcast
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast;
+
+                    /**
+                     * Decodes a SendGiftBroadcast message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns SendGiftBroadcast
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast;
+
+                    /**
+                     * Verifies a SendGiftBroadcast message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a SendGiftBroadcast message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns SendGiftBroadcast
+                     */
+                    public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast;
+
+                    /**
+                     * Creates a plain object from a SendGiftBroadcast message. Also converts values to other types if specified.
+                     * @param message SendGiftBroadcast
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this SendGiftBroadcast to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for SendGiftBroadcast
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                namespace SendGiftBroadcast {
+
+                    /** Properties of a BagGiftInfo. */
+                    interface IBagGiftInfo {
+
+                        /** BagGiftInfo showPrice */
+                        showPrice?: (number|null);
+
+                        /** BagGiftInfo priceForShow */
+                        priceForShow?: (number|Long|null);
+                    }
+
+                    /** Represents a BagGiftInfo. */
+                    class BagGiftInfo implements IBagGiftInfo {
+
+                        /**
+                         * Constructs a new BagGiftInfo.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo);
+
+                        /** BagGiftInfo showPrice. */
+                        public showPrice: number;
+
+                        /** BagGiftInfo priceForShow. */
+                        public priceForShow: (number|Long);
+
+                        /**
+                         * Creates a new BagGiftInfo instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns BagGiftInfo instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo): bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo;
+
+                        /**
+                         * Encodes the specified BagGiftInfo message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo.verify|verify} messages.
+                         * @param message BagGiftInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified BagGiftInfo message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo.verify|verify} messages.
+                         * @param message BagGiftInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a BagGiftInfo message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns BagGiftInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo;
+
+                        /**
+                         * Decodes a BagGiftInfo message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns BagGiftInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo;
+
+                        /**
+                         * Verifies a BagGiftInfo message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a BagGiftInfo message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns BagGiftInfo
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo;
+
+                        /**
+                         * Creates a plain object from a BagGiftInfo message. Also converts values to other types if specified.
+                         * @param message BagGiftInfo
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.BagGiftInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this BagGiftInfo to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BagGiftInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a BlindGift. */
+                    interface IBlindGift {
+
+                        /** BlindGift blindGiftConfigId */
+                        blindGiftConfigId?: (number|Long|null);
+
+                        /** BlindGift originalGiftId */
+                        originalGiftId?: (number|Long|null);
+
+                        /** BlindGift originalGiftName */
+                        originalGiftName?: (string|null);
+
+                        /** BlindGift from */
+                        from?: (number|Long|null);
+
+                        /** BlindGift giftAction */
+                        giftAction?: (string|null);
+
+                        /** BlindGift originalGiftPrice */
+                        originalGiftPrice?: (number|Long|null);
+
+                        /** BlindGift giftTipPrice */
+                        giftTipPrice?: (number|Long|null);
+                    }
+
+                    /** Represents a BlindGift. */
+                    class BlindGift implements IBlindGift {
+
+                        /**
+                         * Constructs a new BlindGift.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift);
+
+                        /** BlindGift blindGiftConfigId. */
+                        public blindGiftConfigId: (number|Long);
+
+                        /** BlindGift originalGiftId. */
+                        public originalGiftId: (number|Long);
+
+                        /** BlindGift originalGiftName. */
+                        public originalGiftName: string;
+
+                        /** BlindGift from. */
+                        public from: (number|Long);
+
+                        /** BlindGift giftAction. */
+                        public giftAction: string;
+
+                        /** BlindGift originalGiftPrice. */
+                        public originalGiftPrice: (number|Long);
+
+                        /** BlindGift giftTipPrice. */
+                        public giftTipPrice: (number|Long);
+
+                        /**
+                         * Creates a new BlindGift instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns BlindGift instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift): bilibili.live.gift.v1.SendGiftBroadcast.BlindGift;
+
+                        /**
+                         * Encodes the specified BlindGift message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.BlindGift.verify|verify} messages.
+                         * @param message BlindGift message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified BlindGift message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.BlindGift.verify|verify} messages.
+                         * @param message BlindGift message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IBlindGift, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a BlindGift message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns BlindGift
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.BlindGift;
+
+                        /**
+                         * Decodes a BlindGift message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns BlindGift
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.BlindGift;
+
+                        /**
+                         * Verifies a BlindGift message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a BlindGift message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns BlindGift
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.BlindGift;
+
+                        /**
+                         * Creates a plain object from a BlindGift message. Also converts values to other types if specified.
+                         * @param message BlindGift
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.BlindGift, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this BlindGift to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for BlindGift
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a FaceEffect. */
+                    interface IFaceEffect {
+
+                        /** FaceEffect faceEffectType */
+                        faceEffectType?: (number|Long|null);
+
+                        /** FaceEffect candidateFaceEffects */
+                        candidateFaceEffects?: (bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem[]|null);
+                    }
+
+                    /** Represents a FaceEffect. */
+                    class FaceEffect implements IFaceEffect {
+
+                        /**
+                         * Constructs a new FaceEffect.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect);
+
+                        /** FaceEffect faceEffectType. */
+                        public faceEffectType: (number|Long);
+
+                        /** FaceEffect candidateFaceEffects. */
+                        public candidateFaceEffects: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem[];
+
+                        /**
+                         * Creates a new FaceEffect instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns FaceEffect instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect;
+
+                        /**
+                         * Encodes the specified FaceEffect message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect.verify|verify} messages.
+                         * @param message FaceEffect message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified FaceEffect message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect.verify|verify} messages.
+                         * @param message FaceEffect message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a FaceEffect message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns FaceEffect
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect;
+
+                        /**
+                         * Decodes a FaceEffect message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns FaceEffect
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect;
+
+                        /**
+                         * Verifies a FaceEffect message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a FaceEffect message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns FaceEffect
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect;
+
+                        /**
+                         * Creates a plain object from a FaceEffect message. Also converts values to other types if specified.
+                         * @param message FaceEffect
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.FaceEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this FaceEffect to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FaceEffect
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a FaceEffectItem. */
+                    interface IFaceEffectItem {
+
+                        /** FaceEffectItem effectId */
+                        effectId?: (number|Long|null);
+
+                        /** FaceEffectItem source */
+                        source?: (number|Long|null);
+                    }
+
+                    /** Represents a FaceEffectItem. */
+                    class FaceEffectItem implements IFaceEffectItem {
+
+                        /**
+                         * Constructs a new FaceEffectItem.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem);
+
+                        /** FaceEffectItem effectId. */
+                        public effectId: (number|Long);
+
+                        /** FaceEffectItem source. */
+                        public source: (number|Long);
+
+                        /**
+                         * Creates a new FaceEffectItem instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns FaceEffectItem instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem;
+
+                        /**
+                         * Encodes the specified FaceEffectItem message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem.verify|verify} messages.
+                         * @param message FaceEffectItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified FaceEffectItem message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem.verify|verify} messages.
+                         * @param message FaceEffectItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a FaceEffectItem message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns FaceEffectItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem;
+
+                        /**
+                         * Decodes a FaceEffectItem message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns FaceEffectItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem;
+
+                        /**
+                         * Verifies a FaceEffectItem message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a FaceEffectItem message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns FaceEffectItem
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem;
+
+                        /**
+                         * Creates a plain object from a FaceEffectItem message. Also converts values to other types if specified.
+                         * @param message FaceEffectItem
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this FaceEffectItem to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FaceEffectItem
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a FaceEffectV2. */
+                    interface IFaceEffectV2 {
+
+                        /** FaceEffectV2 id */
+                        id?: (number|Long|null);
+
+                        /** FaceEffectV2 type */
+                        type?: (number|Long|null);
+                    }
+
+                    /** Represents a FaceEffectV2. */
+                    class FaceEffectV2 implements IFaceEffectV2 {
+
+                        /**
+                         * Constructs a new FaceEffectV2.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2);
+
+                        /** FaceEffectV2 id. */
+                        public id: (number|Long);
+
+                        /** FaceEffectV2 type. */
+                        public type: (number|Long);
+
+                        /**
+                         * Creates a new FaceEffectV2 instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns FaceEffectV2 instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2;
+
+                        /**
+                         * Encodes the specified FaceEffectV2 message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2.verify|verify} messages.
+                         * @param message FaceEffectV2 message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified FaceEffectV2 message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2.verify|verify} messages.
+                         * @param message FaceEffectV2 message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a FaceEffectV2 message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns FaceEffectV2
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2;
+
+                        /**
+                         * Decodes a FaceEffectV2 message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns FaceEffectV2
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2;
+
+                        /**
+                         * Verifies a FaceEffectV2 message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a FaceEffectV2 message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns FaceEffectV2
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2;
+
+                        /**
+                         * Creates a plain object from a FaceEffectV2 message. Also converts values to other types if specified.
+                         * @param message FaceEffectV2
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.FaceEffectV2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this FaceEffectV2 to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for FaceEffectV2
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a GiftItem. */
+                    interface IGiftItem {
+
+                        /** GiftItem giftId */
+                        giftId?: (number|Long|null);
+
+                        /** GiftItem giftName */
+                        giftName?: (string|null);
+
+                        /** GiftItem num */
+                        num?: (number|Long|null);
+
+                        /** GiftItem demarcation */
+                        demarcation?: (number|Long|null);
+
+                        /** GiftItem price */
+                        price?: (number|Long|null);
+
+                        /** GiftItem discountPrice */
+                        discountPrice?: (number|Long|null);
+
+                        /** GiftItem totalCoin */
+                        totalCoin?: (number|Long|null);
+
+                        /** GiftItem coinType */
+                        coinType?: (string|null);
+
+                        /** GiftItem tid */
+                        tid?: (string|null);
+
+                        /** GiftItem timestamp */
+                        timestamp?: (number|Long|null);
+
+                        /** GiftItem superBatchGiftNum */
+                        superBatchGiftNum?: (number|Long|null);
+
+                        /** GiftItem batchComboId */
+                        batchComboId?: (string|null);
+
+                        /** GiftItem comboResourcesId */
+                        comboResourcesId?: (number|Long|null);
+
+                        /** GiftItem comboTotalCoin */
+                        comboTotalCoin?: (number|Long|null);
+
+                        /** GiftItem comboStayTime */
+                        comboStayTime?: (number|Long|null);
+
+                        /** GiftItem magnification */
+                        magnification?: (number|null);
+
+                        /** GiftItem showBatchComboSend */
+                        showBatchComboSend?: (boolean|null);
+
+                        /** GiftItem action */
+                        action?: (string|null);
+
+                        /** GiftItem effectBlock */
+                        effectBlock?: (number|Long|null);
+
+                        /** GiftItem isSpecialBatch */
+                        isSpecialBatch?: (number|Long|null);
+
+                        /** GiftItem floatScResourceId */
+                        floatScResourceId?: (number|Long|null);
+
+                        /** GiftItem tagImage */
+                        tagImage?: (string|null);
+
+                        /** GiftItem critProb */
+                        critProb?: (number|Long|null);
+
+                        /** GiftItem rcost */
+                        rcost?: (number|Long|null);
+
+                        /** GiftItem test */
+                        test?: (number|Long|null);
+
+                        /** GiftItem faceEffectType */
+                        faceEffectType?: (number|Long|null);
+
+                        /** GiftItem faceEffectId */
+                        faceEffectId?: (number|Long|null);
+
+                        /** GiftItem isNaming */
+                        isNaming?: (boolean|null);
+
+                        /** GiftItem receiveUserInfo */
+                        receiveUserInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo|null);
+
+                        /** GiftItem isJoinReceiver */
+                        isJoinReceiver?: (boolean|null);
+
+                        /** GiftItem bagGift */
+                        bagGift?: (bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo|null);
+
+                        /** GiftItem giftTag */
+                        giftTag?: ((number|Long)[]|null);
+
+                        /** GiftItem receiverUinfo */
+                        receiverUinfo?: (bilibili.live.component.common_model.user_dagw.IUserInfo|null);
+
+                        /** GiftItem faceEffectV2 */
+                        faceEffectV2?: (bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2|null);
+
+                        /** GiftItem giftInfo */
+                        giftInfo?: (bilibili.live.gift.v1.IGiftMaterialSnapShot|null);
+
+                        /** GiftItem giftTipPrice */
+                        giftTipPrice?: (number|Long|null);
+
+                        /** GiftItem faceEffect */
+                        faceEffect?: (bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect|null);
+
+                        /** GiftItem benefits */
+                        benefits?: (bilibili.live.gift.v1.IGiftBenefits|null);
+
+                        /** GiftItem effectConfig */
+                        effectConfig?: (bilibili.live.component.common_model.effect.IEffectConfigItem|null);
+                    }
+
+                    /** Represents a GiftItem. */
+                    class GiftItem implements IGiftItem {
+
+                        /**
+                         * Constructs a new GiftItem.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem);
+
+                        /** GiftItem giftId. */
+                        public giftId: (number|Long);
+
+                        /** GiftItem giftName. */
+                        public giftName: string;
+
+                        /** GiftItem num. */
+                        public num: (number|Long);
+
+                        /** GiftItem demarcation. */
+                        public demarcation: (number|Long);
+
+                        /** GiftItem price. */
+                        public price: (number|Long);
+
+                        /** GiftItem discountPrice. */
+                        public discountPrice: (number|Long);
+
+                        /** GiftItem totalCoin. */
+                        public totalCoin: (number|Long);
+
+                        /** GiftItem coinType. */
+                        public coinType: string;
+
+                        /** GiftItem tid. */
+                        public tid: string;
+
+                        /** GiftItem timestamp. */
+                        public timestamp: (number|Long);
+
+                        /** GiftItem superBatchGiftNum. */
+                        public superBatchGiftNum: (number|Long);
+
+                        /** GiftItem batchComboId. */
+                        public batchComboId: string;
+
+                        /** GiftItem comboResourcesId. */
+                        public comboResourcesId: (number|Long);
+
+                        /** GiftItem comboTotalCoin. */
+                        public comboTotalCoin: (number|Long);
+
+                        /** GiftItem comboStayTime. */
+                        public comboStayTime: (number|Long);
+
+                        /** GiftItem magnification. */
+                        public magnification: number;
+
+                        /** GiftItem showBatchComboSend. */
+                        public showBatchComboSend: boolean;
+
+                        /** GiftItem action. */
+                        public action: string;
+
+                        /** GiftItem effectBlock. */
+                        public effectBlock: (number|Long);
+
+                        /** GiftItem isSpecialBatch. */
+                        public isSpecialBatch: (number|Long);
+
+                        /** GiftItem floatScResourceId. */
+                        public floatScResourceId: (number|Long);
+
+                        /** GiftItem tagImage. */
+                        public tagImage: string;
+
+                        /** GiftItem critProb. */
+                        public critProb: (number|Long);
+
+                        /** GiftItem rcost. */
+                        public rcost: (number|Long);
+
+                        /** GiftItem test. */
+                        public test: (number|Long);
+
+                        /** GiftItem faceEffectType. */
+                        public faceEffectType: (number|Long);
+
+                        /** GiftItem faceEffectId. */
+                        public faceEffectId: (number|Long);
+
+                        /** GiftItem isNaming. */
+                        public isNaming: boolean;
+
+                        /** GiftItem receiveUserInfo. */
+                        public receiveUserInfo?: (bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo|null);
+
+                        /** GiftItem isJoinReceiver. */
+                        public isJoinReceiver: boolean;
+
+                        /** GiftItem bagGift. */
+                        public bagGift?: (bilibili.live.gift.v1.SendGiftBroadcast.IBagGiftInfo|null);
+
+                        /** GiftItem giftTag. */
+                        public giftTag: (number|Long)[];
+
+                        /** GiftItem receiverUinfo. */
+                        public receiverUinfo?: (bilibili.live.component.common_model.user_dagw.IUserInfo|null);
+
+                        /** GiftItem faceEffectV2. */
+                        public faceEffectV2?: (bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffectV2|null);
+
+                        /** GiftItem giftInfo. */
+                        public giftInfo?: (bilibili.live.gift.v1.IGiftMaterialSnapShot|null);
+
+                        /** GiftItem giftTipPrice. */
+                        public giftTipPrice: (number|Long);
+
+                        /** GiftItem faceEffect. */
+                        public faceEffect?: (bilibili.live.gift.v1.SendGiftBroadcast.IFaceEffect|null);
+
+                        /** GiftItem benefits. */
+                        public benefits?: (bilibili.live.gift.v1.IGiftBenefits|null);
+
+                        /** GiftItem effectConfig. */
+                        public effectConfig?: (bilibili.live.component.common_model.effect.IEffectConfigItem|null);
+
+                        /**
+                         * Creates a new GiftItem instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns GiftItem instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem): bilibili.live.gift.v1.SendGiftBroadcast.GiftItem;
+
+                        /**
+                         * Encodes the specified GiftItem message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.GiftItem.verify|verify} messages.
+                         * @param message GiftItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified GiftItem message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.GiftItem.verify|verify} messages.
+                         * @param message GiftItem message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IGiftItem, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a GiftItem message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns GiftItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.GiftItem;
+
+                        /**
+                         * Decodes a GiftItem message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns GiftItem
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.GiftItem;
+
+                        /**
+                         * Verifies a GiftItem message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a GiftItem message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns GiftItem
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.GiftItem;
+
+                        /**
+                         * Creates a plain object from a GiftItem message. Also converts values to other types if specified.
+                         * @param message GiftItem
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.GiftItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this GiftItem to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for GiftItem
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a MedalInfo. */
+                    interface IMedalInfo {
+
+                        /** MedalInfo targetId */
+                        targetId?: (number|Long|null);
+
+                        /** MedalInfo special */
+                        special?: (string|null);
+
+                        /** MedalInfo anchorUname */
+                        anchorUname?: (string|null);
+
+                        /** MedalInfo anchorRoomid */
+                        anchorRoomid?: (number|Long|null);
+
+                        /** MedalInfo medalLevel */
+                        medalLevel?: (number|Long|null);
+
+                        /** MedalInfo medalName */
+                        medalName?: (string|null);
+
+                        /** MedalInfo medalColor */
+                        medalColor?: (number|Long|null);
+
+                        /** MedalInfo medalColorStart */
+                        medalColorStart?: (number|Long|null);
+
+                        /** MedalInfo medalColorEnd */
+                        medalColorEnd?: (number|Long|null);
+
+                        /** MedalInfo medalColorBorder */
+                        medalColorBorder?: (number|Long|null);
+
+                        /** MedalInfo isLighted */
+                        isLighted?: (number|Long|null);
+
+                        /** MedalInfo guardLevel */
+                        guardLevel?: (number|Long|null);
+                    }
+
+                    /** Represents a MedalInfo. */
+                    class MedalInfo implements IMedalInfo {
+
+                        /**
+                         * Constructs a new MedalInfo.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo);
+
+                        /** MedalInfo targetId. */
+                        public targetId: (number|Long);
+
+                        /** MedalInfo special. */
+                        public special: string;
+
+                        /** MedalInfo anchorUname. */
+                        public anchorUname: string;
+
+                        /** MedalInfo anchorRoomid. */
+                        public anchorRoomid: (number|Long);
+
+                        /** MedalInfo medalLevel. */
+                        public medalLevel: (number|Long);
+
+                        /** MedalInfo medalName. */
+                        public medalName: string;
+
+                        /** MedalInfo medalColor. */
+                        public medalColor: (number|Long);
+
+                        /** MedalInfo medalColorStart. */
+                        public medalColorStart: (number|Long);
+
+                        /** MedalInfo medalColorEnd. */
+                        public medalColorEnd: (number|Long);
+
+                        /** MedalInfo medalColorBorder. */
+                        public medalColorBorder: (number|Long);
+
+                        /** MedalInfo isLighted. */
+                        public isLighted: (number|Long);
+
+                        /** MedalInfo guardLevel. */
+                        public guardLevel: (number|Long);
+
+                        /**
+                         * Creates a new MedalInfo instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns MedalInfo instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo): bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo;
+
+                        /**
+                         * Encodes the specified MedalInfo message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo.verify|verify} messages.
+                         * @param message MedalInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified MedalInfo message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo.verify|verify} messages.
+                         * @param message MedalInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IMedalInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a MedalInfo message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns MedalInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo;
+
+                        /**
+                         * Decodes a MedalInfo message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns MedalInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo;
+
+                        /**
+                         * Verifies a MedalInfo message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a MedalInfo message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns MedalInfo
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo;
+
+                        /**
+                         * Creates a plain object from a MedalInfo message. Also converts values to other types if specified.
+                         * @param message MedalInfo
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.MedalInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this MedalInfo to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for MedalInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a ReceiveUserInfo. */
+                    interface IReceiveUserInfo {
+
+                        /** ReceiveUserInfo uname */
+                        uname?: (string|null);
+
+                        /** ReceiveUserInfo uid */
+                        uid?: (number|Long|null);
+                    }
+
+                    /** Represents a ReceiveUserInfo. */
+                    class ReceiveUserInfo implements IReceiveUserInfo {
+
+                        /**
+                         * Constructs a new ReceiveUserInfo.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo);
+
+                        /** ReceiveUserInfo uname. */
+                        public uname: string;
+
+                        /** ReceiveUserInfo uid. */
+                        public uid: (number|Long);
+
+                        /**
+                         * Creates a new ReceiveUserInfo instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns ReceiveUserInfo instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo): bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo;
+
+                        /**
+                         * Encodes the specified ReceiveUserInfo message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo.verify|verify} messages.
+                         * @param message ReceiveUserInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified ReceiveUserInfo message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo.verify|verify} messages.
+                         * @param message ReceiveUserInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IReceiveUserInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a ReceiveUserInfo message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns ReceiveUserInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo;
+
+                        /**
+                         * Decodes a ReceiveUserInfo message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns ReceiveUserInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo;
+
+                        /**
+                         * Verifies a ReceiveUserInfo message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a ReceiveUserInfo message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns ReceiveUserInfo
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo;
+
+                        /**
+                         * Creates a plain object from a ReceiveUserInfo message. Also converts values to other types if specified.
+                         * @param message ReceiveUserInfo
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.ReceiveUserInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this ReceiveUserInfo to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for ReceiveUserInfo
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a SendMaster. */
+                    interface ISendMaster {
+
+                        /** SendMaster uid */
+                        uid?: (number|Long|null);
+
+                        /** SendMaster uname */
+                        uname?: (string|null);
+                    }
+
+                    /** Represents a SendMaster. */
+                    class SendMaster implements ISendMaster {
+
+                        /**
+                         * Constructs a new SendMaster.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster);
+
+                        /** SendMaster uid. */
+                        public uid: (number|Long);
+
+                        /** SendMaster uname. */
+                        public uname: string;
+
+                        /**
+                         * Creates a new SendMaster instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns SendMaster instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster): bilibili.live.gift.v1.SendGiftBroadcast.SendMaster;
+
+                        /**
+                         * Encodes the specified SendMaster message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.SendMaster.verify|verify} messages.
+                         * @param message SendMaster message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified SendMaster message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.SendMaster.verify|verify} messages.
+                         * @param message SendMaster message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.ISendMaster, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a SendMaster message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns SendMaster
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.SendMaster;
+
+                        /**
+                         * Decodes a SendMaster message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns SendMaster
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.SendMaster;
+
+                        /**
+                         * Verifies a SendMaster message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a SendMaster message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns SendMaster
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.SendMaster;
+
+                        /**
+                         * Creates a plain object from a SendMaster message. Also converts values to other types if specified.
+                         * @param message SendMaster
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.SendMaster, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this SendMaster to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for SendMaster
+                         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                         * @returns The default type url
+                         */
+                        public static getTypeUrl(typeUrlPrefix?: string): string;
+                    }
+
+                    /** Properties of a WealthInfo. */
+                    interface IWealthInfo {
+
+                        /** WealthInfo level */
+                        level?: (number|Long|null);
+                    }
+
+                    /** Represents a WealthInfo. */
+                    class WealthInfo implements IWealthInfo {
+
+                        /**
+                         * Constructs a new WealthInfo.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo);
+
+                        /** WealthInfo level. */
+                        public level: (number|Long);
+
+                        /**
+                         * Creates a new WealthInfo instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns WealthInfo instance
+                         */
+                        public static create(properties?: bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo): bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo;
+
+                        /**
+                         * Encodes the specified WealthInfo message. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo.verify|verify} messages.
+                         * @param message WealthInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified WealthInfo message, length delimited. Does not implicitly {@link bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo.verify|verify} messages.
+                         * @param message WealthInfo message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: bilibili.live.gift.v1.SendGiftBroadcast.IWealthInfo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a WealthInfo message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns WealthInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo;
+
+                        /**
+                         * Decodes a WealthInfo message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns WealthInfo
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo;
+
+                        /**
+                         * Verifies a WealthInfo message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a WealthInfo message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns WealthInfo
+                         */
+                        public static fromObject(object: { [k: string]: any }): bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo;
+
+                        /**
+                         * Creates a plain object from a WealthInfo message. Also converts values to other types if specified.
+                         * @param message WealthInfo
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: bilibili.live.gift.v1.SendGiftBroadcast.WealthInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this WealthInfo to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+
+                        /**
+                         * Gets the default type url for WealthInfo
                          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
                          * @returns The default type url
                          */

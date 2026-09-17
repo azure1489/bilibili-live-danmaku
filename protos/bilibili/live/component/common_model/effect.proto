@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package bilibili.live.component.common_model.effect;
+
+//
+message EffectConfigItem {
+    //
+    int64 type = 1;
+    //
+    string web_svga = 2;
+    //
+    string horizontal_svga = 3;
+    //
+    string vertical_svga = 4;
+    //
+    string web_mp4 = 5;
+    //
+    string web_mp4_json = 6;
+    //
+    string horizontal_mp4 = 7;
+    //
+    string vertical_mp4 = 8;
+    //
+    int64 id = 9;
+    //
+    repeated int64 plan_platform = 10;
+    //
+    repeated int64 bind_gift_ids = 11;
+    //
+    string web_mp4_md5 = 12;
+    //
+    string horizontal_mp4_md5 = 13;
+    //
+    string vertical_mp4_md5 = 14;
+    //
+    int64 web_mp4_crc32 = 15;
+    //
+    int64 horizontal_mp4_crc32 = 16;
+    //
+    int64 vertical_mp4_crc32 = 17;
+    //
+    int64 web_mp4_file_size = 18;
+    //
+    int64 horizontal_mp4_file_size = 19;
+    //
+    int64 vertical_mp4_file_size = 20;
+    //
+    H265Conf h265_conf = 21;
+}
+
+//
+message FileConfItem {
+    //
+    string mp4 = 1;
+    //
+    string mp4_md5 = 2;
+    //
+    string mp4_json = 3;
+    //
+    int64 mp4_crc32 = 4;
+    //
+    int64 mp4_file_size = 5;
+}
+
+//
+message H265Conf {
+    //
+    FileConfItem horizontal_mp4 = 1;
+    //
+    FileConfItem vertical_mp4 = 2;
+}

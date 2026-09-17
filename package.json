@@ -6,11 +6,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "proto": "pbjs -t static-module -w es6 -o ./src/proto/index.js -p ./protos ./protos/**/*.proto && pbts -o ./src/proto/index.d.ts ./src/proto/index.js && tsx ./scripts/proto-after.ts",
-    "test": "npm run clear; npm run unit",
+    "proto": "pbjs -t static-module -w es6 -o ./src/proto/index.js -p ./protos './protos/**/*.proto' && pbts -o ./src/proto/index.d.ts ./src/proto/index.js && tsx ./scripts/proto-after.ts",
+    "test": "npm run check && npm run build",
     "clear": "rimraf ./dist",
     "check": "tsc -noEmit",
-    "build": "npm run clear && tsc -b && npx cpy ./**/*.js ./**/*.d.ts ../dist/ --cwd=./src && tsc-alias",
+    "build": "npm run clear && tsc -b && npx cpy './**/*.js' './**/*.d.ts' ../dist/ --cwd=./src && tsc-alias",
     "demo": "tsx ./demo/index.ts",
     "prepack": "npm run build",
     "postpack": "npm run clear"

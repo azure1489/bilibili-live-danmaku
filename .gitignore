@@ -84,3 +84,6 @@ typings/
 
 #others
 .ignore
+
+# tts 播报配置
+tts/config.yaml

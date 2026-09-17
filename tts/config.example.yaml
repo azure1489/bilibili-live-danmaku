@@ -1,0 +1,20 @@
+# B站直播 TTS 播报配置示例
+# 使用：cp tts/config.example.yaml tts/config.yaml 后编辑
+# 优先级：命令行参数 > 本文件 > 内置默认值
+# 登录 cookie 不写在这里，从 .env 的 API_CLIENT_COOKIE 读取（npm run login 扫码登录）
+
+room_id: 573893                     # 直播间号，取自 https://live.bilibili.com/<房间号>（命令行位置参数可覆盖）
+tts_server: "http://localhost:8080" # tts-server 地址
+voice: ""                           # 音色 voice_type，留空使用服务端默认
+log_level: info                     # debug / info / warn / error
+dry_run: false                      # true：只打印文案，不提交到 tts-server
+only_live: true                     # true：未开播时不播报
+
+# 各类事件的播报开关
+enable:
+  danmaku: true    # 弹幕
+  gift: true       # 礼物
+  like: true       # 点赞
+  fansclub: true   # 加入粉丝团
+  superchat: true  # 醒目留言（SC）
+  guard: true      # 开通 / 续费大航海

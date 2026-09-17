@@ -7,12 +7,15 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "proto": "pbjs -t static-module -w es6 -o ./src/proto/index.js -p ./protos './protos/**/*.proto' && pbts -o ./src/proto/index.d.ts ./src/proto/index.js && tsx ./scripts/proto-after.ts",
-    "test": "npm run check && npm run build",
+    "test": "npm run check && npm run check:tools && npm run test:tts && npm run build",
     "clear": "rimraf ./dist",
     "check": "tsc -noEmit",
+    "check:tools": "tsc -p tsconfig.tools.json",
     "build": "npm run clear && tsc -b && npx cpy './**/*.js' './**/*.d.ts' ../dist/ --cwd=./src && tsc-alias",
     "demo": "tsx ./demo/index.ts",
     "login": "tsx ./scripts/login.ts",
+    "tts": "tsx ./tts/index.ts",
+    "test:tts": "node --import tsx --test './tts/*.test.ts'",
     "prepack": "npm run build",
     "postpack": "npm run clear"
   },
@@ -35,6 +38,7 @@
   "homepage": "https://github.com/Minteea/bilibili-live-danmaku#readme",
   "devDependencies": {
     "@types/md5": "^2.3.5",
+    "@types/node": "^22.20.3",
     "@types/pako": "^2.0.0",
     "@types/qrcode": "^1.5.6",
     "cpy-cli": "^6.0.0",
@@ -44,7 +48,8 @@
     "rimraf": "^6.0.1",
     "tsc-alias": "^1.8.16",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "yaml": "^2.9.1"
   },
   "dependencies": {
     "@floating-live/cookies": "^0.1.0",

@@ -381,3 +381,50 @@ export interface DataApiGenWebTicket {
     sub: string;
   };
 }
+
+/** 导航栏用户信息（登录状态）
+ * https://api.bilibili.com/x/web-interface/nav */
+export interface DataXapiNav {
+  /** 是否已登录 */
+  isLogin: boolean;
+  /** 用户uid，未登录时不存在 */
+  mid?: number;
+  /** 用户名，未登录时不存在 */
+  uname?: string;
+}
+
+/** 申请登录二维码
+ * https://passport.bilibili.com/x/passport-login/web/qrcode/generate */
+export interface DataPassportQrcodeGenerate {
+  /** 二维码内容 */
+  url: string;
+  /** 扫码登录秘钥 */
+  qrcode_key: string;
+}
+
+/** 扫码登录状态码 */
+export enum QrcodeLoginCode {
+  /** 登录成功 */
+  SUCCESS = 0,
+  /** 二维码已失效 */
+  EXPIRED = 86038,
+  /** 已扫码未确认 */
+  SCANNED = 86090,
+  /** 未扫码 */
+  WAITING = 86101,
+}
+
+/** 轮询扫码登录状态
+ * https://passport.bilibili.com/x/passport-login/web/qrcode/poll?qrcode_key={key} */
+export interface DataPassportQrcodePoll {
+  /** 登录成功时为跨域跳转地址 */
+  url: string;
+  /** 刷新令牌，用于之后刷新cookie */
+  refresh_token: string;
+  /** 登录时间(ms) */
+  timestamp: number;
+  /** 扫码状态码 */
+  code: QrcodeLoginCode;
+  /** 扫码状态信息 */
+  message: string;
+}

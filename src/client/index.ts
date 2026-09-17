@@ -1,6 +1,10 @@
 import { Cookies } from "@floating-live/cookies";
 import {
   DataApiGenWebTicket,
+  DataPassportQrcodeGenerate,
+  DataPassportQrcodePoll,
+  DataXapiNav,
+  QrcodeLoginCode,
   DataXliveGetInfoByRoom,
   DataXliveGetRoomBaseInfo,
   ResponseDataRoot,
@@ -187,6 +191,47 @@ export class BilibiliApiClient extends Client {
     csrf && url.searchParams.set("csrf", csrf);
     const res = await this.request(url, { method: "POST" });
     return unwrapRequestData<DataApiGenWebTicket>(res);
+  }
+
+  /** 获取登录状态，未登录时不抛出错误，返回 isLogin: false */
+  async xapiNav(): Promise<ResponseDataRoot<DataXapiNav>> {
+    const res = await this.request(
+      "https://api.bilibili.com/x/web-interface/nav"
+    );
+    assertRequestOk(res);
+    const resJson: ResponseDataRoot<DataXapiNav> = await res.json();
+    // -101：账号未登录
+    if (resJson.code != 0 && resJson.code != -101) {
+      throw new RequestError({
+        ok: true,
+        code: resJson.code,
+        message: resJson.message,
+      });
+    }
+    return resJson;
+  }
+
+  /** 申请登录二维码 */
+  async passportQrcodeGenerate() {
+    const res = await this.request(
+      "https://passport.bilibili.com/x/passport-login/web/qrcode/generate?source=main-fe-header"
+    );
+    return unwrapRequestData<DataPassportQrcodeGenerate>(res);
+  }
+
+  /** 轮询扫码登录状态，登录成功时会将登录cookie写入客户端 */
+  async passportQrcodePoll(params: { qrcode_key: string }) {
+    const url = new URL(
+      "https://passport.bilibili.com/x/passport-login/web/qrcode/poll"
+    );
+    url.searchParams.set("qrcode_key", params.qrcode_key);
+    url.searchParams.set("source", "main-fe-header");
+    const res = await this.request(url);
+    const data = await unwrapRequestData<DataPassportQrcodePoll>(res);
+    if (data.data.code === QrcodeLoginCode.SUCCESS) {
+      this.cookies.setFromHeaders(res.headers);
+    }
+    return data;
   }
 
   async xapiSpi() {

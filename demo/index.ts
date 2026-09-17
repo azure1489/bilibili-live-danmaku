@@ -25,6 +25,7 @@ const roomid = 2064239;
 
 // 设置 cookie
 // 在根目录创建一个 .env 文件，内容为 API_CLIENT_COOKIE="xxxxxx" 即可设置cookie
+// 也可以运行 npm run login 扫码登录，登录cookie会自动写入 .env
 // 注：用户未登录的情况下，弹幕用户名会被打码。设置已登录用户的cookie可解除限制。注意不要将cookie泄露给他人
 const cookie = getEnv("API_CLIENT_COOKIE") || "";
 

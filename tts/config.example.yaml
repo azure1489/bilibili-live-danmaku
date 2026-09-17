@@ -9,6 +9,7 @@ voice: ""                           # 音色 voice_type，留空使用服务端�
 log_level: info                     # debug / info / warn / error
 dry_run: false                      # true：只打印文案，不提交到 tts-server
 only_live: true                     # true：未开播时不播报
+skip_anchor_danmaku: true           # true：不播报主播本人的弹幕
 
 # 各类事件的播报开关
 enable:

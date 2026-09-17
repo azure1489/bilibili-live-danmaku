@@ -7,12 +7,15 @@ import { memoryLogger, simpleGift } from "./testing";
 
 const ANCHOR = 777;
 
-function setup(options: { onlyLive?: boolean; live?: boolean; enable?: Partial<EnableOptions> } = {}) {
+function setup(
+  options: { onlyLive?: boolean; live?: boolean; skipAnchorDanmaku?: boolean; enable?: Partial<EnableOptions> } = {},
+) {
   let now = 0;
   const queue = new EventQueue();
   const logger = memoryLogger();
   const pipeline = new Pipeline(queue, {
     onlyLive: options.onlyLive ?? true,
+    skipAnchorDanmaku: options.skipAnchorDanmaku ?? true,
     enable: { danmaku: true, gift: true, like: true, fansclub: true, superchat: true, guard: true, ...options.enable },
     logger,
     now: () => now,
@@ -51,10 +54,25 @@ describe("Pipeline", () => {
     assert.equal(queue.size, 1);
   });
 
-  it("跳过主播本人的弹幕", () => {
+  it("默认跳过主播本人的弹幕", () => {
     const { pipeline, queue } = setup();
     pipeline.handle(danmakuMsg("我是主播", ANCHOR));
     assert.equal(queue.size, 0);
+  });
+
+  it("关闭 skipAnchorDanmaku 时播报主播弹幕", async () => {
+    const { pipeline, queue } = setup({ skipAnchorDanmaku: false });
+    pipeline.handle(danmakuMsg("我是主播", ANCHOR));
+    const ev = await queue.pop();
+    assert.equal(ev?.uid, ANCHOR);
+    assert.equal(ev?.content, "我是主播");
+  });
+
+  it("主播 uid 未知时不当作主播弹幕", () => {
+    const { pipeline, queue } = setup();
+    pipeline.setRoom({ roomId: 1, anchorUid: 0, live: true });
+    pipeline.handle(danmakuMsg("未登录时的弹幕", 0));
+    assert.equal(queue.size, 1);
   });
 
   it("礼物连击合并后输出，下播后 tick 仍会输出已有连击", async () => {

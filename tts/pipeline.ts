@@ -18,6 +18,8 @@ export type EnableOptions = Record<EventSwitch, boolean>;
 export interface PipelineOptions {
   /** 未开播时不播报 */
   onlyLive: boolean;
+  /** 跳过主播本人的弹幕 */
+  skipAnchorDanmaku: boolean;
   enable: EnableOptions;
   logger: Logger;
   now?: () => number;
@@ -85,8 +87,9 @@ export class Pipeline {
       case "DANMU_MSG": {
         if (!enable.danmaku) return;
         const danmaku = parseDanmaku(msg, this.anchorUid);
-        // 跳过主播本人的弹幕
-        if (!danmaku || (this.anchorUid && danmaku.uid === this.anchorUid)) return;
+        if (!danmaku) return;
+        const fromAnchor = this.anchorUid > 0 && danmaku.uid === this.anchorUid;
+        if (fromAnchor && this.options.skipAnchorDanmaku) return;
         const ev = this.danmaku.process(danmaku, now);
         if (ev) this.push(ev);
         return;

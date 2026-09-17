@@ -11,6 +11,8 @@ export interface Config {
   logLevel: LogLevel;
   dryRun: boolean;
   onlyLive: boolean;
+  /** 跳过主播本人的弹幕 */
+  skipAnchorDanmaku: boolean;
   enable: EnableOptions;
   /** 登录 cookie，来自环境变量 API_CLIENT_COOKIE */
   cookie: string;
@@ -21,13 +23,14 @@ export const DEFAULT_CONFIG_PATH = "tts/config.yaml";
 export const USAGE = `用法：npm run tts -- [选项] [房间号]
 
 选项（优先级：命令行 > 配置文件 > 默认值）：
-  --config <路径>        配置文件，默认 ${DEFAULT_CONFIG_PATH}（不存在时忽略）
-  --tts-server <地址>    tts-server 地址，默认 http://localhost:8080
-  --voice <音色>         音色 voice_type，默认使用服务端配置
-  --log-level <级别>     debug / info / warn / error，默认 info
-  --dry-run              只打印文案，不提交到 tts-server
-  --no-only-live         未开播时也播报
-  -h, --help             显示帮助
+  --config <路径>           配置文件，默认 ${DEFAULT_CONFIG_PATH}（不存在时忽略）
+  --tts-server <地址>       tts-server 地址，默认 http://localhost:8080
+  --voice <音色>            音色 voice_type，默认使用服务端配置
+  --log-level <级别>        debug / info / warn / error，默认 info
+  --dry-run                 只打印文案，不提交到 tts-server
+  --no-only-live            未开播时也播报
+  --no-skip-anchor-danmaku  播报主播本人的弹幕
+  -h, --help                显示帮助
 
 登录 cookie 从 .env 的 API_CLIENT_COOKIE 读取，可运行 npm run login 扫码登录。`;
 
@@ -50,6 +53,7 @@ interface FileConfig {
   log_level?: unknown;
   dry_run?: unknown;
   only_live?: unknown;
+  skip_anchor_danmaku?: unknown;
   enable?: unknown;
 }
 
@@ -60,6 +64,7 @@ const FILE_KEYS = new Set<string>([
   "log_level",
   "dry_run",
   "only_live",
+  "skip_anchor_danmaku",
   "enable",
 ]);
 
@@ -154,6 +159,7 @@ export function loadConfig(argv: string[], deps: LoadConfigDeps = {}): Config {
         "log-level": { type: "string" },
         "dry-run": { type: "boolean" },
         "only-live": { type: "boolean" },
+        "skip-anchor-danmaku": { type: "boolean" },
         help: { type: "boolean", short: "h" },
       },
     });
@@ -181,6 +187,10 @@ export function loadConfig(argv: string[], deps: LoadConfigDeps = {}): Config {
     logLevel: logLevelValue(cli["log-level"] ?? file.log_level ?? "info", "log_level"),
     dryRun: boolValue(cli["dry-run"] ?? file.dry_run ?? false, "dry_run"),
     onlyLive: boolValue(cli["only-live"] ?? file.only_live ?? true, "only_live"),
+    skipAnchorDanmaku: boolValue(
+      cli["skip-anchor-danmaku"] ?? file.skip_anchor_danmaku ?? true,
+      "skip_anchor_danmaku",
+    ),
     enable: parseEnable(file.enable, path),
     cookie: env.API_CLIENT_COOKIE ?? "",
   };

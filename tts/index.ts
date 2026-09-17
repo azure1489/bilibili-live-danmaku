@@ -72,7 +72,12 @@ try {
 }
 
 const queue = new EventQueue();
-const pipeline = new Pipeline(queue, { onlyLive: config.onlyLive, enable: config.enable, logger });
+const pipeline = new Pipeline(queue, {
+  onlyLive: config.onlyLive,
+  skipAnchorDanmaku: config.skipAnchorDanmaku,
+  enable: config.enable,
+  logger,
+});
 const speaker = new Speaker({ queue, tts, dryRun: config.dryRun, logger });
 const source = new LiveSource({
   roomId: config.roomId,

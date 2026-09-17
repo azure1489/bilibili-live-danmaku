@@ -24,6 +24,7 @@ describe("loadConfig", () => {
       logLevel: "info",
       dryRun: false,
       onlyLive: true,
+      skipAnchorDanmaku: true,
       enable: { danmaku: true, gift: true, like: true, fansclub: true, superchat: true, guard: true },
       cookie: "SESSDATA=x",
     });
@@ -38,6 +39,7 @@ describe("loadConfig", () => {
         "log_level: debug",
         "dry_run: true",
         "only_live: false",
+        "skip_anchor_danmaku: false",
         "enable: { like: false }",
       ].join("\n"),
     };
@@ -48,11 +50,12 @@ describe("loadConfig", () => {
     assert.equal(fromFile.logLevel, "debug");
     assert.equal(fromFile.dryRun, true);
     assert.equal(fromFile.onlyLive, false);
+    assert.equal(fromFile.skipAnchorDanmaku, false);
     assert.equal(fromFile.enable.like, false);
     assert.equal(fromFile.enable.gift, true);
 
     const fromCli = load(
-      ["--tts-server", "http://cli", "--voice", "", "--log-level", "warn", "--no-dry-run", "--only-live", "2"],
+      ["--tts-server", "http://cli", "--voice", "", "--log-level", "warn", "--no-dry-run", "--only-live", "--skip-anchor-danmaku", "2"],
       files,
     );
     assert.equal(fromCli.roomId, 2);
@@ -61,13 +64,15 @@ describe("loadConfig", () => {
     assert.equal(fromCli.logLevel, "warn");
     assert.equal(fromCli.dryRun, false);
     assert.equal(fromCli.onlyLive, true);
+    assert.equal(fromCli.skipAnchorDanmaku, true);
   });
 
   it("--config 指定文件", () => {
-    const config = load(["--config", "my.yaml", "--dry-run", "--no-only-live"], { "my.yaml": "room_id: '3'" });
+    const config = load(["--config", "my.yaml", "--dry-run", "--no-only-live", "--no-skip-anchor-danmaku"], { "my.yaml": "room_id: '3'" });
     assert.equal(config.roomId, 3);
     assert.equal(config.dryRun, true);
     assert.equal(config.onlyLive, false);
+    assert.equal(config.skipAnchorDanmaku, false);
     assertConfigError(() => load(["--config", "missing.yaml", "1"]), /配置文件不存在/);
   });
 
@@ -96,6 +101,7 @@ describe("loadConfig", () => {
     assertConfigError(withFile("- 1"), /格式错误/);
     assertConfigError(withFile("a: [b"), /解析失败/);
     assertConfigError(withFile("dry_run: yes please"), /dry_run/);
+    assertConfigError(withFile("skip_anchor_danmaku: 1"), /skip_anchor_danmaku/);
     assertConfigError(withFile("enable: { chat: true }"), /未知事件：chat/);
     assertConfigError(withFile("enable: { gift: 1 }"), /enable.gift/);
     assertConfigError(withFile("enable: [gift]"), /enable 格式错误/);
